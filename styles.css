@@ -1,0 +1,42 @@
+.Menu_principal{
+    width: auto;
+    padding: 2% 2%;
+    border-bottom: solid 2px white;
+    border-style:double;
+}
+
+.Logo{
+    color: white;
+    font-weight: bold;
+    font-size: 2em;
+    width: calc(20% - 20px);
+    display: inline-block;
+}
+.Menu{
+    width: calc(80% - 20px);
+    display: inline-block;
+    text-align: right;
+}
+
+.item{
+    display: inline-block;
+    color: white;
+    font-weight: bold;
+    font-size: 1.5em;
+    margin-left: 30px;
+    
+}
+
+.item a{
+    color: white;
+    text-decoration: none;
+    padding: 5px 10px;
+    border-radius: 5%;
+}
+.item a:hover{
+    color: rgb(7, 40, 112);
+    text-decoration: none;
+    background-color: rgb(0, 245, 82);
+}
+
+
