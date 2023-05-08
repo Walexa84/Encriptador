@@ -6,13 +6,15 @@
 }
 
 .Logo{
-    color: white;
-    font-weight: bold;
-    font-size: 2em;
+    vertical-align: middle;
     width: calc(20% - 20px);
     display: inline-block;
 }
+.logo-img{
+    width: 100%;
+}
 .Menu{
+    vertical-align: middle;
     width: calc(80% - 20px);
     display: inline-block;
     text-align: right;
@@ -34,9 +36,9 @@
     border-radius: 5%;
 }
 .item a:hover{
-    color: rgb(7, 40, 112);
+    color: rgb(253, 253, 253);
     text-decoration: none;
-    background-color: rgb(0, 245, 82);
+    background-color: rgb(19, 157, 248);
 }
 
 
