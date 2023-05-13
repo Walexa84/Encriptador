@@ -1,3 +1,20 @@
+/**Diseño de Body*/
+body{
+    background-image: url("Imagenes/Body_background.jpg");
+}
+
+/*CSS de textos*/
+.titulo-instrucciones{
+    color: white;
+    margin: 3% 0;
+    text-align: center;
+    font-weight: bold;
+    font-size: 1.5em;
+    line-height: 1.5;
+    font-family:  Geneva, Verdana, sans-serif;
+}
+
+/*Aqui va el diseño del menu principal*/
 .Menu_principal{
     width: auto;
     padding: 2% 2%;
@@ -42,3 +59,23 @@
 }
 
 
+/*Aqui va el diseñño del footer---------------------------------------------------*/
+.container-footer{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: auto;
+    height: 100px; /* ajusta la altura de acuerdo a tu diseño */
+    background-color: rgb(29, 56, 78);
+    text-align: center;
+}
+.container-footer h1{
+    color: white;
+    line-height: 1.5;
+    font-family:  Geneva, Verdana, sans-serif;
+}
+
+.img-logo-footer{
+    width: 10%;
+}

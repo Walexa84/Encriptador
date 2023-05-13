@@ -1,0 +1,28 @@
+.logo-alura{
+    width: 40px;
+}
+.main-enriptador{
+    display: flex;
+    width: auto;
+    padding: 3%;
+}
+
+.container-encriptador{
+    display: flex;
+    flex-direction: column;
+    margin-right: 2%;
+    width: 70%;
+    height: 600px;
+}
+
+.container-encriptador-pies{
+    text-align: center;
+}
+.container-desencriptador{
+    margin-left: 2%;
+    width: 30%;
+    height: 600px;
+    background-color: rgb(224, 255, 255);
+    border: solid 4px rgb(42, 126, 137);
+    border-radius: 20px;
+}
