@@ -32,24 +32,50 @@ main{
     font-family:  Geneva, Verdana, sans-serif;
     display: inline-block;
     width: 28%;
-    border: solid 2px white;
-}
-.feature2{
-    color: white;
-    line-height: 1.5;
-    font-family:  Geneva, Verdana, sans-serif;
-    display: inline-block;
-    width: 28%;
     margin: 4% 2%;
     border: solid 2px white;
+    vertical-align: top;
+    background-color: rgba(11, 95, 204, 0.4);
+    flex-grow: 1; /* agrega flex-grow 1 a los elementos */
 }
-.feature3{
-    color: white;
-    line-height: 1.5;
-    font-family:  Geneva, Verdana, sans-serif;
-    display: inline-block;
-    width: 28%;
-    margin: 4% 2%;
+
+.feature1:hover{
+    background-color: rgba(7, 25, 75, 0.4);
+    }
+.feature1:hover .feature-titulo{
+    background-color: rgb(27, 152, 255);
+    }
+
+.feature2:hover{
+    background-color: rgba(7, 25, 75, 0.4);
+    }
+.feature2:hover .feature-titulo{
+    background-color: rgb(27, 152, 255);
+    }
+
+.feature3:hover{
+    background-color: rgba(7, 25, 75, 0.4);
+    }
+.feature3:hover .feature-titulo{
+    background-color: rgb(27, 152, 255);
+    }
+.feature-gif{
+    width: 20%;
+    padding: 15px 0;
+}
+.feature1 .feature-titulo{
+    padding: 2% 0;
+    background-color: rgb(255, 255, 255);
+    color: rgb(1, 48, 110);
+    font-weight: bold;
+    font-size: 1em;
+}
+.feature2 .feature-titulo{
+    padding: 2% 0;
+    background-color: rgb(255, 255, 255);
+    color: rgb(1, 48, 110);
+    font-weight: bold;
+    font-size: 1em;
 }
 .feature3 .feature-titulo{
     padding: 2% 0;
