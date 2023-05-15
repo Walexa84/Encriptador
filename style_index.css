@@ -26,12 +26,13 @@ main{
     display: flex;
 }
 
-.feature1, .feature2, .feature3{
+.feature1{
     color: white;
     line-height: 1.5;
     font-family:  Geneva, Verdana, sans-serif;
     display: inline-block;
     width: 28%;
+    margin: 4% 2%;
     border: solid 2px white;
 }
 .feature2{
@@ -50,6 +51,21 @@ main{
     display: inline-block;
     width: 28%;
     margin: 4% 2%;
+    border: solid 2px white;
+}
+.feature1 .feature-titulo{
+    padding: 2% 0;
+    background-color: rgb(255, 255, 255);
+    color: rgb(1, 48, 110);
+    font-weight: bold;
+    font-size: 1em;
+}
+.feature2 .feature-titulo{
+    padding: 2% 0;
+    background-color: rgb(255, 255, 255);
+    color: rgb(1, 48, 110);
+    font-weight: bold;
+    font-size: 1em;
 }
 .feature3 .feature-titulo{
     padding: 2% 0;
@@ -64,4 +80,9 @@ main{
     font-size: 0.9em;
     color:rgb(255, 255, 255);
     text-align: justify;
+}
+
+.feature-gif{
+    margin-top: 5%;
+    width:22%
 }
