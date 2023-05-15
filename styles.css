@@ -59,7 +59,7 @@ body{
 }
 
 
-/*Aqui va el diseñño del footer---------------------------------------------------*/
+/*Aqui va el diseño del footer---------------------------------------------------*/
 .container-footer{
     display: flex;
     flex-direction: column;
@@ -78,4 +78,115 @@ body{
 
 .img-logo-footer{
     width: 10%;
+}
+/*Cuerpo del encriptador*/
+.container-encriptador-titulo{
+    display: flex;
+    flex-direction: row;
+    justify-content:space-around;
+    padding: 3% 0;
+}
+.container-encriptador-titulo div{
+    margin: 0 20px;
+}
+.container-encriptador-titulo .titulo-instrucciones{
+    justify-self: stretch;
+    margin-right: 70px;
+}
+
+.logo-alura{
+    width: 40px;
+}
+.main-encriptador{
+    display: flex;
+    width: auto;
+    padding: 3%;
+}
+
+.container-encriptador{
+    display: flex;
+    flex-direction: column;
+    margin-right: 2%;
+    width: 70%;
+    height: 600px;
+}
+.form-encriptador{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.container-desencriptador{
+    display: flex;
+    flex-direction: column;
+    padding: 5% 1%;
+    margin-left: 2%;
+    width: 30%;
+    background-color: rgb(224, 255, 255);
+    border: solid 2px rgb(0, 14, 15);
+    border-radius: 20px;
+    text-align: center;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: .9em;
+    font-weight: 300;
+}
+.container-desencriptador div{
+    margin:20px 0;
+}
+
+.container-desencriptador h3{
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 1.35em;
+    font-weight: bold;
+}
+
+.container-encriptador-cuerpo{
+    display: flex;
+    flex-direction: column;
+}
+/*Diseño del texbox para encriptar*/
+.input-encriptador{
+    width: 94%;
+    margin-bottom: 25px;
+    background-color: rgb(228, 245, 247);
+    padding: 1.5% 1.5% 1.5% 1.5%;
+    vertical-align: top;
+    border: solid 2px rgb(0, 14, 15);
+    border-radius: 20px;
+}
+
+/*Diseño de los botones de encriptador*/
+.botones-encriptador{
+    width: 30%;
+    height: 12%;
+    background-color: rgb(11, 90, 155);
+    margin-top: 5px;
+    color: white;
+    font-size: 1.2em;
+    border: solid 2px rgb(28, 210, 255);
+    border-radius: 10px;
+    font-weight: bold;
+}
+.botones-encriptador:nth-of-type(2){
+    width: 30%;
+    height: 12%;
+    background-color: rgb(19, 181, 221);
+    margin-top: 5px;
+    color: white;
+    font-size: 1.2em;
+    border: solid 2px rgb(28, 210, 255);
+    border-radius: 10px;
+    font-weight: bold;
+}
+
+.botones-encriptador:hover{
+    background-color: rgb(11, 155, 47);
+    margin-top: 5px;
+    color: white;
+    font-size: 1.3em;
+    border: solid 2px rgb(28, 210, 255);
+    border-radius: 10px;
+    font-weight: bold;
 }

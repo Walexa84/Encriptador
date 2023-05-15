@@ -26,21 +26,24 @@
                 </nav>
             </div>
         </header>
-        <main class="main-enriptador">
+        <main class="main-encriptador">
            <section class="container-encriptador">
                 <div class="container-encriptador-titulo">
-                    <img src="Imagenes/logo_alura.svg" alt="Logo alura" class="logo-alura">
+                    <div><img src="Imagenes/logo_alura.svg" alt="Logo alura" class="logo-alura"></div>
+                    <div><p class="titulo-instrucciones">Ingrese el texto a encriptar aqui</p></div>
                 </div>
                 <div class="container-encriptador-cuerpo">
-                    <p class="titulo-instrucciones">Ingrese el texto a encriptar aqui</p>
-                </div>
-                <div class="container-encriptador-pies">
-                    <button>Boton 1</button>
-                    <button>Boton 2</button>
+                    <form class="form-encriptador">
+                        <textarea placeholder="Ingresa tu texto" required autofocus class="input-encriptador" rows="25"></textarea>
+                        <button id="1" class="botones-encriptador">Encriptar</button>
+                        <button id="2" class="botones-encriptador">Desencriptar</button>
+                    </form>
                 </div>
            </section>
            <section class="container-desencriptador">
-
+                <div><img src="Imagenes/Muñeco.svg" alt="Muñeco"></div>
+                <div><h3>Ningun mensaje fue encontrado</h3></div>
+                <div>Ingresa el texto que desees encriptar o desencriptar</div>
            </section>
         </main>
         <footer>
