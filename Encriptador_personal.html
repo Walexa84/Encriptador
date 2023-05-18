@@ -5,9 +5,8 @@
         <meta lang="es">
         <title>Practicas de Alura</title>
         <link rel="stylesheet" href="reset.css">
-        <link rel="stylesheet" href="style_encriptador.css">
+        <link rel="stylesheet" href="style_index.css">
         <link rel="stylesheet" href="styles.css">
-        <link rel="script" href="decodificador.js">
     </head>
     <body>
         <header>
@@ -33,17 +32,19 @@
                     <div><p class="titulo-instrucciones">Ingrese el texto a encriptar aqui</p></div>
                 </div>
                 <div class="container-encriptador-cuerpo">
-                    <form class="form-encriptador">
-                        <textarea placeholder="Ingresa tu texto" required autofocus class="input-encriptador" rows="25"></textarea>
-                        <button id="1" class="botones-encriptador">Encriptar</button>
-                        <button id="2" class="botones-encriptador">Desencriptar</button>
+                    <form class="form-encriptador" target="_self">
+                        <textarea placeholder="Ingresa tu texto, este sera convertida a minusculas, tampoco es posible el uso de acentos o caracteres especiales" required autofocus id="input-encriptador" rows="12" oninput="this.value = this.value.toLowerCase().normalize('NFD').replace(/[^a-z0-9\s]/g, '')" ></textarea>
+                        <button id="1" type="button" class="botones-encriptador">Encriptar</button>
+                        <button id="2" type="button" class="botones-encriptador">Desencriptar</button>
                     </form>
                 </div>
            </section>
            <section class="container-desencriptador">
-                <div><img src="Imagenes/Muñeco.svg" alt="Muñeco"></div>
-                <div><h3>Ningun mensaje fue encontrado</h3></div>
-                <div>Ingresa el texto que desees encriptar o desencriptar</div>
+                <div id="imagen-output-1"><img src="Imagenes/Muñeco.svg" alt="Muñeco"></div>
+                <div id="textarea-output-1"><textarea id ="output-encriptador" class="output-encriptador" rows="16" readonly></textarea></div>
+                <div id="button-copy-output"><button id="botonCopiar">Copiar Texto</button></div>
+                <div id="output-titulo-1"><h3>Ningun mensaje fue encontrado</h3></div>
+                <div id="output-texto-1">Ingresa el texto que desees encriptar o desencriptar</div>
            </section>
         </main>
         <footer>
@@ -52,5 +53,6 @@
                 <h1>Pagina creada por Mario Rosas, 2023</h1>
             </div>
         </footer>
+        <script src="decodificador.js"></script>
     </body>
 </html>

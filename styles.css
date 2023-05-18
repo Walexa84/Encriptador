@@ -147,7 +147,7 @@ body{
     flex-direction: column;
 }
 /*Diseño del texbox para encriptar*/
-.input-encriptador{
+#input-encriptador{
     width: 94%;
     margin-bottom: 25px;
     background-color: rgb(228, 245, 247);
@@ -155,6 +155,8 @@ body{
     vertical-align: top;
     border: solid 2px rgb(0, 14, 15);
     border-radius: 20px;
+    font-size: 2em;
+    font-family:monospace
 }
 
 /*Diseño de los botones de encriptador*/
@@ -189,4 +191,48 @@ body{
     border: solid 2px rgb(28, 210, 255);
     border-radius: 10px;
     font-weight: bold;
+}
+
+/*Diseño del output de encriptador*/
+.container-desencriptador img{
+    width: 100%;
+}
+.container-desencriptador textarea{
+    width: 90%;
+    font-family:monospace;
+    font-size: 1.7em;
+    background-color: rgb(224, 255, 255);
+    border: none;
+
+}
+.container-desencriptador button{
+    width: 40%;
+    height: 150%;
+    background-color: rgb(11, 90, 155);
+    margin-top: 5px;
+    color: white;
+    font-size: 1.2em;
+    border: solid 2px rgb(28, 210, 255);
+    border-radius: 10px;
+    font-weight: bold;
+}
+.container-desencriptador #textarea-output-1 {
+    display: none;
+  }
+.container-desencriptador #button-copy-output{
+    display: none;
+}
+.container-desencriptador button:hover{
+    background-color: rgb(11, 155, 47);
+    margin-top: 5px;
+    color: white;
+    font-size: 1.3em;
+    border: solid 2px rgb(28, 210, 255);
+    border-radius: 10px;
+    font-weight: bold;
+}
+.container-desencriptador textarea:focus{
+    outline: none;
+    background-color:transparent;
+    border:none;
 }
