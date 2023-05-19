@@ -19,12 +19,6 @@ function oculta() {
 function encriptarF() {
     let textoinput = textarea.value;
     let textoEncriptado="";
-    /*let textoEncriptado = textoinput.replace(/a/g, "ai")
-                                     .replace(/e/g, "enter")
-                                     .replace(/i/g, "imes")
-                                     .replace(/o/g, "ober")
-                                     .replace(/u/g, "ufat");
-    return textoEncriptado;*/
     for (let index = 0; index < textoinput.length; index++) {
         switch (textoinput[index]) {
             case 'a':
@@ -65,7 +59,54 @@ function desencriptarF() {
     return textoDesenEncriptado;
 
 }
+function desencriptarFpersonal() {
+    let textoinput = textarea.value;
+    let textoDesenEncriptado = textoinput.replace(/fa/g, "")
+                                     .replace(/fe/g, "")
+                                     .replace(/fi/g, "")
+                                     .replace(/fo/g, "")
+                                     .replace(/fu/g, "");
+    return textoDesenEncriptado;
 
+}
+
+function encriptarFpersonal() {
+    let textoinput = textarea.value;
+    let textoEncriptado="";
+    for (let index = 0; index < textoinput.length; index++) {
+        switch (textoinput[index]) {
+            case 'a':
+                textoEncriptado = textoEncriptado+(textoinput[index]+"fa")
+                break;
+            
+            case 'e':
+                    textoEncriptado = textoEncriptado+(textoinput[index]+"fe")
+                break;
+                
+            case 'i':
+                textoEncriptado = textoEncriptado+(textoinput[index]+"fi")
+                break;
+            
+            case 'o':
+                textoEncriptado = textoEncriptado+(textoinput[index]+"fo")
+                break;
+            
+            case 'u':
+                if (textoinput[index-1]=="q") {
+                    textoEncriptado = (textoEncriptado+textoinput[index]);
+                }else{
+                    textoEncriptado = textoEncriptado+(textoinput[index]+"fu")
+                }
+                break;
+        
+            default:
+                textoEncriptado = (textoEncriptado+textoinput[index]);
+                break;
+        }
+        
+    }
+    return textoEncriptado;
+}
 
 // cuerpo
 
@@ -78,25 +119,28 @@ document.addEventListener("DOMContentLoaded", function() {
     botonEncriptar.onclick = function(){
         let texto;
         oculta();
-        texto = encriptarF();
+        texto = encriptarFpersonal();
         document.getElementById("output-encriptador").value = "";
         document.getElementById("output-encriptador").value = texto;
     }
     botonDesencriptar.onclick = function(){
         let texto;
         oculta();
-        texto = desencriptarF();
+        texto = desencriptarFpersonal();
         document.getElementById("output-encriptador").value = "";
         document.getElementById("output-encriptador").value = texto;
     }
     botonCopiar.onclick = function() {
         let textarea = document.getElementById("output-encriptador");
+        let textareainput = document.getElementById("input-encriptador");
         textarea.select();
         navigator.clipboard.writeText(textarea.value).then(function() {
             textarea.setSelectionRange(0, 0); // Deselecciona el texto
-            alert("Texto copiado al portapapeles");
+            textareainput.value=""
+            textareainput.focus;
           })
           .catch(function(error) {
+            
             console.error("Error al copiar al portapapeles: ", error);
           });
       };
