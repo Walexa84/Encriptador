@@ -15,6 +15,18 @@ function oculta() {
         document.getElementById("output-texto-1").style.display = "none";
     }
 }
+function ocultaAlura() {
+    let textoinput = textarea.value;
+    if(textoinput == ""){
+        alert("Primero ingresa un texto")
+    }else{
+        document.getElementById("texto_desencriptar").style.display = "unset";
+        document.getElementById("boton_copiar_alura").style.display = "unset";
+        document.getElementById("imagen_alura").style.display = "none";
+        document.getElementById("mensaje_alura").style.display = "none";
+        document.getElementById("mensajito_alura").style.display = "none";
+    }
+}
 
 function encriptarF() {
     let textoinput = textarea.value;
@@ -114,6 +126,9 @@ document.addEventListener("DOMContentLoaded", function() {
     let botonEncriptar = document.getElementById("1");
     let botonDesencriptar = document.getElementById("2");
     let botonCopiar = document.getElementById("botonCopiar");
+    let botonEncriptarAlura = document.getElementById("alura_boton_encriptar");
+    let botonDesenncriptarAlura = document.getElementById("alura_boton_desencriptar");
+    let botonCopiarAlura = document.getElementById("boton_copiar_alura");
     
 
     botonEncriptar.onclick = function(){
@@ -123,12 +138,26 @@ document.addEventListener("DOMContentLoaded", function() {
         document.getElementById("output-encriptador").value = "";
         document.getElementById("output-encriptador").value = texto;
     }
+    botonEncriptarAlura.onclick = function(){
+        let texto;
+        ocultaAlura();
+        texto = encriptarF();
+        document.getElementById("texto_encriptar").value = "";
+        document.getElementById("texto_encriptar").value = texto;
+    }
     botonDesencriptar.onclick = function(){
         let texto;
         oculta();
         texto = desencriptarFpersonal();
         document.getElementById("output-encriptador").value = "";
         document.getElementById("output-encriptador").value = texto;
+    }
+    botonDesenncriptarAlura.onclick = function(){
+        let texto;
+        ocultaAlura();
+        texto = desencriptarF();
+        document.getElementById("texto_desencriptar").value = "";
+        document.getElementById("texto_desencriptar").value = texto;
     }
     botonCopiar.onclick = function() {
         let textarea = document.getElementById("output-encriptador");
@@ -144,5 +173,18 @@ document.addEventListener("DOMContentLoaded", function() {
             console.error("Error al copiar al portapapeles: ", error);
           });
       };
-      
+      botonCopiarAlura.onclick = function() {
+        let textarea = document.getElementById("texto_desencriptar");
+        let textareainput = document.getElementById("texto_encriptar");
+        textarea.select();
+        navigator.clipboard.writeText(textarea.value).then(function() {
+            textarea.setSelectionRange(0, 0); // Deselecciona el texto
+            textareainput.value=""
+            textareainput.focus;
+          })
+          .catch(function(error) {
+            
+            console.error("Error al copiar al portapapeles: ", error);
+          });
+      };
   });

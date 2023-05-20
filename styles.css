@@ -1,3 +1,6 @@
+html{
+    font-family: 'Didact Gothic', sans-serif;
+}
 /**Diseño de Body*/
 body{
     background-image: url("Imagenes/Body_background.jpg");
@@ -245,4 +248,147 @@ body{
     outline: none;
     background-color:transparent;
     border:none;
+}
+
+/*por pruebas aqui pondre el css de del html encriptador_alura.html*/
+.main_alura{
+    width: 100%;
+}
+.containner{
+    display: flex;
+    background-color: rgb(243, 245, 252);
+    width: 1440px;
+    height: 1024px;
+    margin: 0 auto;
+}
+
+/*CSS conenedor principal*/
+.containner_principal{
+    width: 1000px;
+}
+.logo_alura{
+    margin-left: 84px;
+    margin-top: 40px;
+}
+
+#texto_encriptar{
+    margin-left: 240px;
+    margin-top: 80px;
+    font-size: 32px;
+    font-family: inter;
+    width: 577px;
+    height: 480px;
+    border: none;
+    background-color:rgb(243, 245, 252);
+    outline: none;
+}
+#texto_encriptar::placeholder{
+    color: #0A3871;
+}
+
+.renglon_informativo{
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+.renglon_informativo p {
+    display: inline;
+    color:#495057;
+    
+}
+.renglon_informativo p:first-child {
+    margin-left: 294px;
+    padding:2px 6px;
+    font-weight: bold;
+    font-size: 12px;
+    display: inline;
+    background-color:  #495057;
+    color:rgb(255, 255, 255);
+    border-radius: 100%;
+}
+
+.botones{
+    display: flex;
+    flex-direction:row;
+    align-items:center;
+    justify-content:flex-end;
+    text-align: center;
+    margin-top: 16;
+    margin-right: 80px;
+    gap: 25px;
+    padding: 20px 0;
+}
+.botones button{
+    width: 328px;
+    height: 67px;
+    background: #0A3871;
+    color: white;
+    border-radius: 24px;
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    text-align: center;
+}.botones button:last-child{
+    width: 328px;
+    height: 67px;
+    background: rgb(243, 245, 252);
+    color: #0A3871;
+    border-radius: 24px;
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    text-align: center;
+    border: solid 1px #0A3871;
+}
+header{
+    display: unset;
+}
+
+/*CSS conenedor derecho*/
+.texto_desencriptar{
+    display: none;
+    width: 336px;
+    height: 650px;
+}
+.output_alura{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: white;
+    width: 400px;
+    height: 715px;
+    border-radius: 32px;
+    margin-top: 40px;
+}
+.mensaje_alura{
+    margin-top: 30px;
+    margin-bottom: 15px;
+    font-weight: 700;
+    line-height: 15px;
+    font-size: 24px;
+    color: #343A40;
+    text-align: center;
+}
+.mensajito_alura{
+    margin-top: 30px;
+    margin-bottom: 15px;
+    font-weight: 400;
+    line-height: 28.8px;
+    font-size: 16px;
+    color: #343A40;
+}
+#boton_copiar_alura{
+    width: 328px;
+    height: 67px;
+    background: #0A3871;
+    color: white;
+    border-radius: 24px;
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    text-align: center;
+    display: none;
 }
