@@ -3,6 +3,8 @@
     <head>
         <meta charset="utf-8">
         <meta lang="es">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
         <title>Practicas de Alura</title>
         <link rel="stylesheet" href="reset.css">
         <link rel="stylesheet" href="style_index.css">
@@ -22,8 +24,6 @@
                         <li class="item"><a href="index.html">Inicio</a></li>
                         <li class="item"><a href="Encriptador_personal.html">Encriptador personal</a></li>
                         <li class="item"><a href="Encriptador_alura.html">Encriptador Alura</a></li>
-                        <li class="item"><a href="#">Acerca de mi</a></li>
-                        <li class="item"><a href="http://www.google.comss">Contactame</a></li>
                     </ul>
                 </nav>
             </div>
@@ -42,8 +42,8 @@
                         <p>Solo letras minúsculas y sin acentos</p>
                     </div>
                     <div class="botones">
-                        <button id="alura_boton_encriptar">Encriptar</button>
-                        <button id="alura_boton_desencriptar">Desencriptar</button>
+                        <button id="1" type="button" class="botones-encriptador">Encriptar</button>
+                        <button id="2" type="button" class="botones-encriptador">Desencriptar</button>
                     </div>
                 </section>
                 <section class="containner-derecho">
@@ -52,20 +52,21 @@
                             <textarea name="texto_desencriptar" 
                             id="texto_desencriptar" 
                             cols="1" 
-                            rows="1">
+                            rows="1"
+                            readonly>
                         </textarea>
                         </div>
                         <div class="imagen_alura">
-                            <img src="/Imagenes/Muñeco.svg" alt="Muñeco">
+                            <img id="imagen_alura" src="/Imagenes/Muñeco.svg" alt="Muñeco">
                         </div>
-                        <div class="mensaje_alura">
+                        <div id="mensaje_alura" class="mensaje_alura">
                             <p>Ningun mensaje fue</p><p><br>encontrado</p>
                         </div>
-                        <div class="mensajito_alura">
+                        <div id="mensajito_alura" class="mensajito_alura">
                             <p>Ingresa el texto que quieres encruptar o desencriptar</p>
                         </div>
                         <div class="boton_copiar_alura">
-                            <button id="boton_copiar_alura">Copiar</button>
+                            <button type="button"  id="3">Copiar</button>
                         </div>
                     </div>
                 </section>
@@ -78,7 +79,7 @@
                 <h1>Pagina creada por Mario Rosas, 2023</h1>
             </div>
         </footer>
-        <script src="decodificador.js"></script>
+        <script src="decodificador_alura.js"></script>
     </body>
 </html>
 

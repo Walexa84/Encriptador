@@ -19,6 +19,9 @@ body{
 
 /*Aqui va el diseño del menu principal*/
 .Menu_principal{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
     width: auto;
     padding: 2% 2%;
     border-bottom: solid 2px white;
@@ -27,22 +30,24 @@ body{
 
 .Logo{
     vertical-align: middle;
-    width: calc(20% - 20px);
+    width: 20%;
     display: inline-block;
 }
 .logo-img{
     width: 100%;
 }
 .Menu{
-    vertical-align: middle;
-    width: calc(80% - 20px);
-    display: inline-block;
-    text-align: right;
+    width: 80%;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
 }
-
+.items-menu{
+    display: flex;
+}
 .item{
     display: inline-block;
-    color: white;
+    color: rgb(255, 255, 255);
     font-weight: bold;
     font-size: 1.5em;
     margin-left: 30px;
@@ -258,7 +263,7 @@ body{
     display: flex;
     background-color: rgb(243, 245, 252);
     width: 1440px;
-    height: 1024px;
+    height: 800px;
     margin: 0 auto;
 }
 
@@ -341,15 +346,44 @@ body{
     text-align: center;
     border: solid 1px #0A3871;
 }
+.botones button:hover{
+    width: 328px;
+    height: 67px;
+    background: #062b58;
+    color: white;
+    border-radius: 24px;
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 450;
+    font-size: 16px;
+    text-align: center;
+}
+.botones button:last-child:hover{
+    width: 328px;
+    height: 67px;
+    background: rgb(217, 222, 242);
+    color: rgb(47, 19, 175);
+    border-radius: 24px;
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 450;
+    font-size: 16px;
+    text-align: center;
+}
+
 header{
     display: unset;
 }
 
 /*CSS conenedor derecho*/
-.texto_desencriptar{
+#texto_desencriptar{
     display: none;
     width: 336px;
     height: 650px;
+    outline: none;
+    border: none;
+    font-size: 2em;
+    color: #0A3871;
 }
 .output_alura{
     display: flex;
@@ -379,7 +413,7 @@ header{
     font-size: 16px;
     color: #343A40;
 }
-#boton_copiar_alura{
+.boton_copiar_alura button{
     width: 328px;
     height: 67px;
     background: #0A3871;
@@ -391,4 +425,51 @@ header{
     font-size: 16px;
     text-align: center;
     display: none;
+}
+
+.boton_copiar_alura button:hover{
+  width: 328px;
+    height: 67px;
+    background: #062b58;
+    color: white;
+    border-radius: 24px;
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 450;
+    font-size: 16px;
+    text-align: center;
+}
+@media (max-width:415px){
+    body{
+        width: auto;
+        justify-content: center;
+        align-items: center;
+        background-image: none;
+        background-color: black;
+    }
+    main{
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+    }
+    .Menu_principal{
+        flex-direction:column;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+    }
+    .items-menu{
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    .item{
+        width: 100%;
+    }
+    .logo{
+ 
+    }
+    .Menu{
+
+    }
 }

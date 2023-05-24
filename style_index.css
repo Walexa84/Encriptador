@@ -19,57 +19,68 @@ main{
     color: rgb(255, 255, 255);
     font-size: 5em;
 }
+main{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
 .caja{
     width: auto;
-    margin: 0 auto;
+    justify-content: space-around;
+    align-items: center;
     text-align: center;
     display: flex;
+    flex-wrap: wrap;
 }
 
 .feature1{
+    display: flex;
+    margin: 3% 0;
+    flex-wrap: wrap;
     color: white;
     line-height: 1.5;
     font-family:  Geneva, Verdana, sans-serif;
     display: inline-block;
-    width: 28%;
-    margin: 4% 2%;
+    width: 30%;
     border: solid 2px white;
 }
 .feature2{
+    display: flex;
+    flex-wrap: wrap;
     color: white;
     line-height: 1.5;
     font-family:  Geneva, Verdana, sans-serif;
     display: inline-block;
-    width: 28%;
-    margin: 4% 2%;
+    width: 30%;
     border: solid 2px white;
 }
 .feature3{
+    display: flex;
+    flex-wrap: wrap;
     color: white;
     line-height: 1.5;
     font-family:  Geneva, Verdana, sans-serif;
     display: inline-block;
-    width: 28%;
-    margin: 4% 2%;
+    width: 30%;
     border: solid 2px white;
 }
 .feature1 .feature-titulo{
-    padding: 2% 0;
     background-color: rgb(255, 255, 255);
+    padding: 2% 0;
     color: rgb(1, 48, 110);
     font-weight: bold;
     font-size: 1em;
 }
 .feature2 .feature-titulo{
-    padding: 2% 0;
     background-color: rgb(255, 255, 255);
+    padding: 2% 0;
     color: rgb(1, 48, 110);
     font-weight: bold;
     font-size: 1em;
 }
 .feature3 .feature-titulo{
-    padding: 2% 0;
     background-color: rgb(255, 255, 255);
+    padding: 2% 0;
     color: rgb(1, 48, 110);
     font-weight: bold;
     font-size: 1em;
@@ -106,4 +117,29 @@ main{
 .feature-gif{
     margin-top: 5%;
     width:22%
+}
+@media (max-width:415px){
+    .Menu_principal{
+        flex-direction: column;
+        color: chartreuse;
+        flex-wrap: wrap;
+    }
+    .logo{
+        width: 100%;
+    }
+    .caja{
+        width: auto;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    .feature1{
+        width: 400px;
+    }
+    .feature2{
+        width: 400px;
+    }
+    .feature3{
+        width: 400px;
+    }
 }
