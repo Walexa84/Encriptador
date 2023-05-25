@@ -27,7 +27,7 @@ main{
 .caja{
     width: auto;
     justify-content: space-around;
-    align-items: center;
+    align-items:baseline;
     text-align: center;
     display: flex;
     flex-wrap: wrap;
